@@ -13,7 +13,13 @@
     <meta content="Themesbrand" name="author" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- App favicon -->
-    <link rel="shortcut icon" href="public/assets/images/c.png">
+    @if (
+        $route == 'loan-details'
+    )
+    <link rel="shortcut icon" href="../public/assets/images/fav.png">
+    @else
+    <link rel="shortcut icon" href="public/assets/images/fav.png">
+    @endif
 
     <!-- jsvectormap css -->
     <link href="public/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
