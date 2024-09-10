@@ -17,8 +17,8 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="gap-2 p-3 rounded-lg col-md-12 row">
+    <div class="">
+        <div class="flex gap-2 px-5 py-3 col-md-12">
             @if ($user->photos->isNotEmpty())
                 @foreach ($user->photos as $photo)
                     @php
@@ -26,7 +26,7 @@
                             ? url('public/storage/' . $photo->path) 
                             : 'https://minatasresources.com/' . $photo->path;
                     @endphp
-                    <img src="{{ $photoPath }}" alt="user-img" class="rounded-sm img-thumbnail col-3" />
+                    <img width="5" src="{{ $photoPath }}" alt="user-img" class="col-1" />
                 @endforeach
             @else
                 @php
@@ -37,11 +37,11 @@
                         $defaultImage = 'public/assets/images/boy.png';
                     }
                 @endphp
-                <img src="{{ $defaultImage }}" alt="user-img" class="rounded-sm img-thumbnail col-3" />
+                <img width="5" src="{{ $defaultImage }}" alt="user-img" class="col-1" />
             @endif
         </div>
-        <div class="p-4 mb-4 profile-header bg-light-success rounded-3">
-                <div class="row g-4 align-items-center">
+        <div class="p-3 px-6 mb-4 profile-header bg-light-success">
+                <div class="px-4 row align-items-center">
                     <div class="col-lg-8">
                         <h2 class="mb-3 text-success"><b>{{ $user->fname.' '.$user->lname }}</b></h2>
                         <div class="flex gap-3 mb-3 d-flex">
@@ -99,8 +99,8 @@
                     <div class="pt-4 tab-content text-muted">
                         <div class="tab-pane active" id="overview-tab" role="tabpanel">
                             <div class="px-3">
-                                <div class="row">
-                                    <div class="card col-md-6">
+                                <div class="bg-white row">
+                                    <div class="col-md-6">
                                         <div class="card-body">
                                             <h5 class="mb-3 card-title"><b>Basic & Personal Information</b></h5>
                                             <div class="px-8 table-responsive row">
@@ -142,7 +142,7 @@
                                     </div>
 
 
-                                    <div class="card col-md-6">
+                                    <div class=" col-md-6">
                                         <div class="card-body">
                                             <div class="mb-2 d-flex align-items-center">
                                                 <div class="flex-grow-1">
@@ -151,9 +151,6 @@
                                             </div>
                                             <div>
                                                 <div class="py-3 d-flex align-items-center">
-                                                    <div class="flex-shrink-0 avatar-xs me-3">
-                                                        <img src="public/assets/images/user.png" alt="" class="img-fluid rounded-circle" />
-                                                    </div>
                                                     <div class="flex-grow-1">
                                                         <div>
                                                             <h5 class="mb-1 fs-14">Fullnames</h5>
@@ -162,9 +159,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="py-3 d-flex align-items-center">
-                                                    <div class="flex-shrink-0 avatar-xs me-3">
-                                                        <img src="public/assets/images/users/phone.png" alt="" class="img-fluid rounded-circle" />
-                                                    </div>
                                                     <div class="flex-grow-1">
                                                         <div>
                                                             <h5 class="mb-1 fs-14">Phone Number</h5>
@@ -173,9 +167,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="py-3 d-flex align-items-center">
-                                                    <div class="flex-shrink-0 avatar-xs me-3">
-                                                        <img src="public/assets/images/users/calendar.png" alt="" class="img-fluid rounded-circle" />
-                                                    </div>
                                                     <div class="flex-grow-1">
                                                         <div>
                                                             <h5 class="mb-1 fs-14">Date of Birth</h5>
@@ -184,9 +175,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="py-3 d-flex align-items-center">
-                                                    <div class="flex-shrink-0 avatar-xs me-3">
-                                                        <img src="public/assets/images/users/email.png" alt="" class="img-fluid rounded-circle" />
-                                                    </div>
                                                     <div class="flex-grow-1">
                                                         <div>
                                                             <h5 class="mb-1 fs-14">Email Address</h5>
