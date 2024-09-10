@@ -49,7 +49,7 @@ class SystemItemSettings extends Component
         $this->loan_types = LoanType::get();
         $this->loan_categories = LoanChildType::with('loan_type')->get();
         return view('livewire.dashboard.site-settings.system-item-settings')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 
     public function CheckCRB()

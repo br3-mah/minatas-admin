@@ -14,7 +14,7 @@
         </li>
         <li class="sidebar-list"><i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('dashboard') }}"> 
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Home-dashboard"></use>
+            <use href="#Home-dashboard"></use>
             </svg> --}}
             <h6>Dashboards</h6>
             {{-- <i class="iconly-Arrow-Right-2 icli"></i> --}}
@@ -31,12 +31,12 @@
         
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('view-loan-requests') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Wallet"></use>
+            <use href="#Wallet"></use>
             </svg> --}}
             <h6 class="f-w-600">All Loan Requests</h6></a></li>
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="javascript:void(0)">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Bag"></use>
+            <use href="#Bag"></use>
             </svg> --}}
             <h6 class="f-w-600">Loan Management</h6><i class="iconly-Arrow-Right-2 icli"> </i></a>
         <ul class="sidebar-submenu">
@@ -58,7 +58,7 @@
         </li>
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('loan-calculator') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Message"></use>
+            <use href="#Message"></use>
             </svg> --}}
             <h6 class="f-w-600">Repayment Calculator</h6></a></li>
       
@@ -72,7 +72,7 @@
             <i class="fa-solid fa-thumbtack"></i>
             <a class="sidebar-link" href="{{ route('borrowers') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#More-box"></use>
+            <use href="#More-box"></use>
             </svg> --}}
             <h6 class="f-w-600">Borrowers</h6></a>
         </li>
@@ -80,7 +80,7 @@
             <i class="fa-solid fa-thumbtack"></i>
             <a class="sidebar-link" href="{{ route('refs') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#More-box"></use>
+            <use href="#More-box"></use>
             </svg> --}}
             <h6 class="f-w-600">References </h6></a>
         </li>
@@ -95,7 +95,7 @@
             <i class="fa-solid fa-thumbtack"></i>
             <a class="sidebar-link" href="{{ route('employees') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#More-box"></use>
+            <use href="#More-box"></use>
             </svg> --}}
             <h6 class="f-w-600">Employees</h6></a>
         </li>
@@ -107,7 +107,7 @@
         </li>
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('make-payment') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#More-box"></use>
+            <use href="#More-box"></use>
             </svg> --}}
             <h6 class="f-w-600">Loan Repayments</h6></a></li>
         
@@ -118,19 +118,19 @@
         </li>
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('users') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Filter"></use>
+            <use href="#Filter"></use>
             </svg> --}}
             <h6 class="f-w-600">Users</h6></a>
         </li>
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('roles') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Filter"></use>
+            <use href="#Filter"></use>
             </svg> --}}
             <h6 class="f-w-600">Roles & Permissions</h6></a>
         </li>
         <li class="sidebar-list"> <i class="fa-solid fa-thumbtack"></i><a class="sidebar-link" href="{{ route('sys-settings') }}">
             {{-- <svg class="stroke-icon">
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Filter"></use>
+            <use href="#Filter"></use>
             </svg> --}}
             <h6 class="f-w-600">Settings & Configurations</h6></a>
         </li>

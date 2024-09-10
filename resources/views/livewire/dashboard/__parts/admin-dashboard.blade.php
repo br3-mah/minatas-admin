@@ -34,7 +34,7 @@
             <p> Welcome back! Let’s start from where you left.</p>
             <div class="d-flex align-center justify-content-between"><a class="btn btn-pill btn-primary" href="{{ route('proxy-loan-create') }}">Create New Loan!</a><span> 
                 {{-- <svg class="stroke-icon">
-                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#watch"></use>
+                    <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#watch"></use>
                 </svg>  --}}
                 
                 11:14 AM</span></div>
@@ -59,7 +59,7 @@
                 {{-- <span class="text-primary">
                     36.28%
                 <svg class="stroke-icon stroke-primary">
-                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#arrow-down"></use>
+                    <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#arrow-down"></use>
                 </svg></span> --}}
             </div>
             <div id="earnings-chart"></div>
@@ -82,7 +82,7 @@
                         <div class="gap-2 d-flex"> 
                             {{-- <div class="flex-shrink-0 bg-light-primary">
                                 <svg class="stroke-icon">
-                                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#job-bag"></use>
+                                    <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#job-bag"></use>
                                 </svg>
                             </div> --}}
                             <div class="flex-grow-1"> 
@@ -95,7 +95,7 @@
                     <div class="gap-2 d-flex"> 
                         {{-- <div class="flex-shrink-0 bg-light-secondary">
                         <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#employees"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#employees"></use>
                         </svg>
                         </div> --}}
                         <div class="flex-grow-1"> 
@@ -108,7 +108,7 @@
                     <div class="gap-2 d-flex"> 
                         {{-- <div class="flex-shrink-0 bg-light-warning">
                         <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#hours-work"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#hours-work"></use>
                         </svg>
                         </div> --}}
                         <div class="flex-grow-1"> 
@@ -132,7 +132,7 @@
                     <div class="gap-2 d-flex"> 
                         {{-- <div class="flex-shrink-0 bg-light-secondary">
                         <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#employees"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#employees"></use>
                         </svg>
                         </div> --}}
                         <div class="flex-grow-1"> 
@@ -145,7 +145,7 @@
                     <div class="gap-2 d-flex"> 
                         {{-- <div class="flex-shrink-0 bg-light-warning">
                         <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#hours-work"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#hours-work"></use>
                         </svg>
                         </div> --}}
                         <div class="flex-grow-1"> 
@@ -161,7 +161,7 @@
                         <div class="gap-2 d-flex"> 
                             {{-- <div class="flex-shrink-0 bg-light-primary">
                                 <svg class="stroke-icon">
-                                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#job-bag"></use>
+                                    <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#job-bag"></use>
                                 </svg>
                             </div> --}}
                             <div class="flex-grow-1"> 
@@ -174,7 +174,7 @@
                     <div class="gap-2 d-flex"> 
                         {{-- <div class="flex-shrink-0 bg-light-secondary">
                         <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#employees"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#employees"></use>
                         </svg>
                         </div> --}}
                         <div class="flex-grow-1"> 
@@ -187,7 +187,7 @@
                     <div class="gap-2 d-flex"> 
                         {{-- <div class="flex-shrink-0 bg-light-warning">
                         <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#hours-work"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#hours-work"></use>
                         </svg>
                         </div> --}}
                         <div class="flex-grow-1"> 
@@ -408,7 +408,7 @@
                             <h6> {{ $loan->user->fname.' '.$loan->user->lname }} </h6></a>
                         <p> 
                             <svg class="stroke-icon">
-                            <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#map-icon"></use>
+                            <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#map-icon"></use>
                             </svg>Texas
                         </p>
                         </div>
@@ -446,7 +446,7 @@
                 </div>
                 <div class="text-center col-6 col-md-12 invest-content">
                 <svg class="stroke-icon">
-                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/icon-sprite.svg#chart-invest"></use>
+                    <use href="https://admin.pixelstrap.net/admiro/public/admin/assets/svg/icon-sprite.svg#chart-invest"></use>
                 </svg>
                 <div class="btn btn-pill btn-primary"> <span> </span>Live</div>
                 <p class="mb-0 des-title">This Invest Cycle</p>

@@ -53,6 +53,5 @@ class CreateLoanView extends Component
     {
         $this->loan_products_stages = LoanStatus::with('status')->where('loan_product_id', $id)->get();
 
-        // dd($this->loan_products_stages);
     }
 }

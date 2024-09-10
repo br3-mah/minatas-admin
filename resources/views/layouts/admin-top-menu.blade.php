@@ -1,7 +1,7 @@
 <header class="page-header row">
 <div class="col-auto logo-wrapper d-flex align-items-center"><a href="index.html"><img class="light-logo img-fluid" src="public/admin/img/logo-white.svg" alt="logo"/><img class="dark-logo img-fluid" src="public/admin/img/logo-dark.svg" alt="logo"/></a><a class="close-btn toggle-sidebar" href="javascript:void(0)">
     <svg class="svg-color">
-        <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Category"></use>
+        <use href="#Category"></use>
     </svg></a></div>
 <div class="page-main-header col">
     <div class="header-left">
@@ -29,15 +29,15 @@
         
         <li class="search d-lg-none d-flex"> <a href="javascript:void(0)">
             <svg>
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Search"></use>
+            <use href="#Search"></use>
             </svg></a></li>
         <li>  <a class="dark-mode" href="javascript:void(0)">
             <svg>
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#moondark"></use>
+            <use href="#moondark"></use>
             </svg></a></li>
         <li class="custom-dropdown"><a href="javascript:void(0)">
             <svg>
-            <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#notification"></use>
+            <use href="#notification"></use>
             </svg></a><span class="badge rounded-pill badge-primary"> {{ auth()->user()->notifications()->count() }} </span>
             <div class="py-0 overflow-hidden custom-menu notification-dropdown">
                 <h3 class="title bg-primary-light dropdown-title">Notification 
@@ -51,7 +51,7 @@
                             <div class="flex-grow-1">
                             <h6 class="f-w-600 font-primary">{{ $note->created_at->toFormattedDateString() }}<span>Today</span><span class="circle-dot-primary float-end">
                                 <svg class="circle-color">
-                                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#circle"></use>
+                                    <use href="#circle"></use>
                                 </svg></span></h6>
                             <h5>{{ $note->data['name'] }}</h5>
                             <p class="mb-0">{{ $note->data['msg'] }}</p>
@@ -92,22 +92,22 @@
             <ul class="profile-body">
             <li class="d-flex"> 
                 <svg class="svg-color">
-                <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Profile"></use>
+                <use href="#Profile"></use>
                 </svg><a class="ms-2" href="{{ route('profile.show') }}">Account</a>
             </li>
             <li class="d-flex"> 
                 <svg class="svg-color">
-                <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Message"></use>
+                <use href="#Message"></use>
                 </svg><a class="ms-2" target="_blank" href="https://mail.google.com">Gmail</a>
             </li>
             {{-- <li class="d-flex"> 
                 <svg class="svg-color">
-                <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Document"></use>
+                <use href="#Document"></use>
                 </svg><a class="ms-2" href="to-do.html">Task</a>
             </li> --}}
             <li class="d-flex">
                 <svg class="svg-color">
-                    <use href="https://admin.pixelstrap.net/admiro/assets/svg/iconly-sprite.svg#Login"></use>
+                    <use href="#Login"></use>
                 </svg>
                 <form method="POST" action="{{ route('logout') }}" class="ms-2">
                     @csrf

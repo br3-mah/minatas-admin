@@ -182,7 +182,7 @@
         let table4 = new DataTable('#loanReqTable',{
             order: [[5, 'desc']]
         });
-        let table4 = new DataTable('#example3Users',{
+        let table5 = new DataTable('#example3Users',{
             order: [[6, 'desc']]
         });
 

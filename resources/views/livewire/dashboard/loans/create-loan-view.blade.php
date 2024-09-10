@@ -37,7 +37,7 @@
                                             <i class="text-danger ri-asterisk"></i>
                                         </span>
                                     </label>
-                                    <select name="loan_type_id" id="loanType" class="form-select" required>
+                                    <select name="loan_type_id" id="loanType" class="form-select" wire:model="selectedLoanType" required>
                                         <option selected>Choose...</option>
                                         @forelse ($loan_types as $lt)
                                             <option value="{{ $lt->id }}">{{ $lt->name }}</option>
@@ -53,7 +53,7 @@
                                             <i class="text-danger ri-asterisk"></i>
                                         </span>
                                     </label>
-                                    <select name="loan_child_type_id" id="loanCategory" class="form-select" required>
+                                    <select name="loan_child_type_id" id="loanCategory" class="form-select" wire:model="selectedLoanCategory" required>
                                         <option selected>Choose...</option>
                                         @forelse ($loan_child_types as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -95,7 +95,7 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="fullnameInput" class="form-label">Principal Amount (K)
+                                    <label for="amount" class="form-label">Principal Amount (K)
                                         <span data-bs-toggle="tooltip" data-bs-placement="top" title="Enter the total principal amount you need.">
                                             <i class="ri-information-line" style="cursor: pointer;"></i>
                                         </span>
@@ -103,10 +103,10 @@
                                             <i class="text-danger ri-asterisk"></i>
                                         </span>
                                     </label>
-                                    <input type="number" name="amount" class="form-control" placeholder="Principal Amount" required>
+                                    <input type="number" name="amount" id="amount" class="form-control" placeholder="Principal Amount" required>
                                 </div>
                                 <script>
-                                    document.getElementById('fullnameInput').addEventListener('input', function(e) {
+                                    document.getElementById('amount').addEventListener('input', function(e) {
                                         let value = e.target.value;
                                         // Remove any non-digit characters
                                         value = value.replace(/\D/g, '');
@@ -299,7 +299,6 @@
 
                                 <script>
                                     document.getElementById('submitButton').addEventListener('click', function() {
-
                                         var button = this;
                                         // Disable the button and show a loading spinner
                                         // button.disabled = true;

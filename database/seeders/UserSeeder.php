@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'fname' => 'Minatas',
             'lname' => 'Resources',
             'email' => 'admin@minatasresources.com',
-            'password' => bcrypt('min@t@2024'),
+            'password' => bcrypt('min@t@s2024'),
         ])->assignRole('admin');
     }
 }
