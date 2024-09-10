@@ -38,7 +38,7 @@ class ApprovedLoansView extends Component
             }
             return view('livewire.dashboard.loans.approved-loans-view',[
                 'requests' => $requests
-            ])->layout('layouts.main');
+            ])->layout('layouts.admin');
 
         } catch (\Throwable $th) {
             // If an exception occurs, set $loan_requests to an empty array
@@ -52,7 +52,7 @@ class ApprovedLoansView extends Component
                 dd($th);
                 return view('livewire.dashboard.loans.approved-loans-view',[
                     'requests'=>$requests
-                ])->layout('layouts.main');
+                ])->layout('layouts.admin');
             }
 
         }

@@ -26,7 +26,7 @@ class MakePaymentView extends Component
         $this->loans = $this->getOpenLoanRequests('auto');
         $this->transactions = Transaction::with('application.user')->orderBy('created_at', 'desc')->get();
         return view('livewire.dashboard.accounts.make-payment-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 
     public function makepayment(){

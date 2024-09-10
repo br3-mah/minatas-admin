@@ -3,16 +3,16 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-                    <h4 class="mb-sm-0">Users</h4>
+            <div class="p-3 col-12">
+                <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 fw-bold">All System Users </h4>
 
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
+                    {{-- <div class="page-title-right">
+                        <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
                             <li class="breadcrumb-item active">Users</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -20,7 +20,7 @@
         <div class="col-12">
             <div class="card">
 
-                <div class="card-body pb-0">
+                <div class="pb-0 card-body">
 
                     <div class="table-responsive">
                         @if (Session::has('attention'))
@@ -46,7 +46,7 @@
                             </button> {{ Session::get('deteted') }}
                         </div>
                         @endif
-                        <table wire:ignore  id="example3" class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+                        <table wire:ignore  id="example3Users" class="table align-middle table-row-bordered table-row-gray-100 gs-0 gy-3">
                             <thead>
                                 <tr class="fw-bold text-muted">
                                     <th></th>
@@ -78,27 +78,29 @@
                                     <td>{{ $user->fname ?? $user->name.' '.$user->lname ?? '' }} </td>
                                     <td>
                                         @forelse($user->roles as $role)
-                                            <span class="capitalize">{{ $role->name }}</span>
+                                            <span class="text-uppercase">{{ 
+                                                $role->name == 'user' ? 'Client' : $role->name 
+                                             }}</span>
                                         @empty
                                             <span>Guest</span>
                                         @endforelse
                                     </td>
-                                    <td>{{ $user->gender }}</td>
+                                    <td>{{ $user->gender ?? 'Unknown' }}</td>
                                     <td>{{ $user->nrc ?? 'No ID' }}</td>
-                                    <td><a href="javascript:void(0);"><strong>{{ $user->phone }}</strong></a></td>
+                                    <td><a href="javascript:void(0);"><strong>{{ $user->phone ?? 'Not set' }}</strong></a></td>
                                     <td><a href="javascript:void(0);"><strong>{{ $user->email }}</strong></a></td>
                                     <td>{{ $user->created_at->toFormattedDateString() }}</td>
                                     <td>
                                         <div class="d-flex">
-                                            <a target="_blank" href="{{ route('client-account', ['key'=>$user->id]) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-eye-alt"></i></a>
-                                            <a target="_blank" href="{{ route('edit-user', ['id'=>$user->id]) }}" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-                                            <a href="#" wire:click="destory({{ $user->id }})" onclick="confirm('Are you sure you want to permanently delete this account.') || event.stopImmediatePropagation();" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                            <a target="_blank" href="{{ route('client-account', ['key'=>$user->id]) }}" class="shadow btn btn-primary btn-xs sharp me-1"><i class="fas fa-eye-alt"></i>View</a>
+                                            <a target="_blank" href="{{ route('edit-user', ['id'=>$user->id]) }}" class="shadow btn btn-primary btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i>Edit</a>
+                                            <a href="#" wire:click="destory({{ $user->id }})" onclick="confirm('Are you sure you want to permanently delete this account.') || event.stopImmediatePropagation();" class="shadow btn btn-danger btn-xs sharp"> Delete</a>
                                         </div>
                                     </td>
                                 </tr>
                                 @empty
-                                <div class="intro-y col-span-12 md:col-span-6">
-                                    <div class="box text-center">
+                                <div class="col-span-12 intro-y md:col-span-6">
+                                    <div class="text-center box">
                                         <p>No User Found</p>
                                     </div>
                                 </div>
@@ -146,19 +148,19 @@
                                                 <div class="col-xl-6 col-xxl-6 col-lg-6">
                                                     <div class="mb-2">
                                                         <div class="col-6">
-                                                            <div class="border-2 border-dashed shadow-xs border-slate-200/60 dark:border-darkmode-400 rounded-md p-0">
-                                                                <div class="h-20 relative image-fit cursor-pointer zoom-in mx-auto">
+                                                            <div class="p-0 border-2 border-dashed rounded-md shadow-xs border-slate-200/60 dark:border-darkmode-400">
+                                                                <div class="relative h-20 mx-auto cursor-pointer image-fit zoom-in">
                                                                     <img class="col-12" alt="" id="preview-image-before-upload_create" src="{{ asset('public/images/noimage.jpg') }}">
-                                                                    {{-- <div title="Remove this profile photo?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-danger right-0 top-0 -mr-2 -mt-2"> <i data-lucide="x" class="w-4 h-4"></i> </div> --}}
+                                                                    {{-- <div title="Remove this profile photo?" class="absolute top-0 right-0 flex items-center justify-center w-5 h-5 -mt-2 -mr-2 text-white rounded-full tooltip bg-danger"> <i data-lucide="x" class="w-4 h-4"></i> </div> --}}
                                                                 </div>
-                                                                <div class="mx-auto cursor-pointer relative mt-5">
+                                                                <div class="relative mx-auto mt-5 cursor-pointer">
                                                                     {{-- <button type="button" class="btn btn-square btn-primary">Add Photo</button> --}}
-                                                                    <input type="file" id="prof_image_create" name="image_path" class="w-full h-full top-0 left-0">
+                                                                    <input type="file" id="prof_image_create" name="image_path" class="top-0 left-0 w-full h-full">
                                                                     {{-- <input type="file" name="image_path" class="w-full h-full"> --}}
                                                                 </div>
                                                                 <small>
                                                                     {{-- @if ($errors->has('image_path'))
-                                                                        <span class="text-danger text-left">{{ $errors->first('image_path') }}</span>
+                                                                        <span class="text-left text-danger">{{ $errors->first('image_path') }}</span>
                                                                     @endif --}}
                                                                 </small>
                                                             </div>
@@ -372,19 +374,19 @@
                                                 <div class="col-xl-6">
                                                     <div class="mb-2">
                                                         <div class="col-12">
-                                                            <div class="border-2 border-dashed shadow-sm border-slate-200/60 dark:border-darkmode-400 rounded-md p-5">
-                                                                <div class="h-40 relative image-fit cursor-pointer zoom-in mx-auto">
+                                                            <div class="p-5 border-2 border-dashed rounded-md shadow-sm border-slate-200/60 dark:border-darkmode-400">
+                                                                <div class="relative h-40 mx-auto cursor-pointer image-fit zoom-in">
                                                                     <img class="rounded-md" alt="Midone - HTML Admin Template" id="preview-image-before-upload_create" src="{{ asset('dist/images/profile-10.jpg') }}">
-                                                                    {{-- <div title="Remove this profile photo?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-danger right-0 top-0 -mr-2 -mt-2"> <i data-lucide="x" class="w-4 h-4"></i> </div> --}}
+                                                                    {{-- <div title="Remove this profile photo?" class="absolute top-0 right-0 flex items-center justify-center w-5 h-5 -mt-2 -mr-2 text-white rounded-full tooltip bg-danger"> <i data-lucide="x" class="w-4 h-4"></i> </div> --}}
                                                                 </div>
-                                                                <div class="mx-auto cursor-pointer relative mt-5">
-                                                                <button type="button" class="btn btn-primary w-full">Add Photo</button>
-                                                                    <input type="file" id="prof_image_create" name="profile_photo_path" class="w-full h-full top-0 left-0 absolute opacity-0">
+                                                                <div class="relative mx-auto mt-5 cursor-pointer">
+                                                                <button type="button" class="w-full btn btn-primary">Add Photo</button>
+                                                                    <input type="file" id="prof_image_create" name="profile_photo_path" class="absolute top-0 left-0 w-full h-full opacity-0">
                                                                     {{-- <input type="file" name="image_path" class="w-full h-full"> --}}
                                                                 </div>
                                                                 <small>
                                                                     {{-- @if ($errors->has('image_path'))
-                                                                        <span class="text-danger text-left">{{ $errors->first('image_path') }}</span>
+                                                                        <span class="text-left text-danger">{{ $errors->first('image_path') }}</span>
                                                                     @endif --}}
                                                                 </small>
                                                             </div>

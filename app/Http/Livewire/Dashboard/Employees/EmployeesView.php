@@ -43,7 +43,7 @@ class EmployeesView extends Component
         return view('livewire.dashboard.employees.employees-view', [
             'users' => $users,
             'roles' => $roles
-        ])->layout('layouts.main');
+        ])->layout('layouts.admin');
     }
 
     public function employeesExcelExport(){

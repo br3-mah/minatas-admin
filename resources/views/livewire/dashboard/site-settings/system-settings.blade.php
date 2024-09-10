@@ -3,28 +3,20 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-                    <h4 class="mb-sm-0">Manage System Settings</h4>
-
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                            <li class="breadcrumb-item active">Manage System Settings</li>
-                        </ol>
-                    </div>
-
+            <div class="p-3 col-12">
+                <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 fw-bold">Manage System Settings</h4>
                 </div>
             </div>
         </div>
+        
         <div>
-
-            <div class="row g-6 g-xl-9 mb-6">
+            <div class="mb-6 row g-6 g-xl-9">
                 <div class="col-md-6 col-xl-4">
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">User Settings</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted fw-bold">User KYC settings</a></li> <!-- Change text color to blue -->
                                     <li><a href="#" class="fs-6 text-muted fw-bold">User Requirements</a></li> <!-- Change text color to blue -->
@@ -37,7 +29,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Loan Settings</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="{{ route('item-settings', ['confg' => 'loan','settings' => 'loan-parent-types']) }}" class="fs-6 text-info fw-bold hover:text-light">Loan Types</a></li>
                                     <li><a href="{{ route('item-settings', ['confg' => 'loan','settings' => 'loan-categories']) }}" class="fs-6 text-info fw-bold hover:text-light">Loan Categories</a></li>
@@ -60,7 +52,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Manage Staff</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     {{-- <li><a href="{{ route('item-settings', ['confg' => 'staff','settings' => 'departments']) }}" class="fs-6 text-info fw-bold">Departments</a></li> <!-- Change text color to blue --> --}}
                                     <li><a href="{{ route('employees') }}" class="fs-6 text-info fw-bold">Staff</a></li>
@@ -79,7 +71,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Manage Branches</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Branches</a></li> <!-- Change text color to blue -->
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Branch Holidays</a></li> <!-- Change text color to blue -->
@@ -92,7 +84,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Borrowers</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Download Statements/Schedules</a></li>
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Format Borrower Report</a></li>
@@ -111,7 +103,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Repayments</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Loan Repayment Methods</a></li>
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Manage Collectors</a></li>
@@ -125,7 +117,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Collateral</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Collecteral Types</a></li>
                                 </ul>
@@ -137,7 +129,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Other Income</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Other Income</a></li>
                                 </ul>
@@ -149,7 +141,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Bulk Updates</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Upload Borrowers from CSV file</a></li>
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Upload Loans from CSV file</a></li>
@@ -166,7 +158,7 @@
                     <div class="card border-hover-primary">
                         <div class="card-body p-9">
                             <div class="fs-4 fw-bold text-dark">Asset Management</div>
-                            <div class="d-flex flex-wrap mb-6 p-4">
+                            <div class="flex-wrap p-4 mb-6 d-flex">
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="fs-6 text-muted disabled fw-bold">Asset Management Types</a></li>
                                 </ul>

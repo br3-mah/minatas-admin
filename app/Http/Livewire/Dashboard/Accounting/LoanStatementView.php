@@ -19,6 +19,6 @@ class LoanStatementView extends Component
     public function render()
     {
         return view('livewire.dashboard.accounting.loan-statement-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 }

@@ -23,7 +23,7 @@ class GuarantorsView extends Component
     public function render()
     {
         $this->guarantors = Guarantor::get();
-        return view('livewire.dashboard.loans.guarantors-view')->layout('layouts.main');
+        return view('livewire.dashboard.loans.guarantors-view')->layout('layouts.admin');
     }
     public function exportGuarantors(){
         return Excel::download(new GuarantorExport, 'Guarantors.xlsx');

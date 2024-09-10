@@ -144,7 +144,7 @@ class UpdateSetting extends Component
             'loan_categories' => $this->loan_categories,
             'loan_types' => $this->loan_types,
             // other properties
-        ])->layout('layouts.main');
+        ])->layout('layouts.admin');
     }
 
 

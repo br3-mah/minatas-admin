@@ -15,7 +15,7 @@ class LoanPackageView extends Component
         $this->authorize('view system settings');
         $this->packages = $this->getLoanPackages();
         return view('livewire.dashboard.settings.loan-package-view')
-        ->layout('layouts.dashboard');
+        ->layout('layouts.admin');
     }
 
     public function store(){

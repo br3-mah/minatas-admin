@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12 col-xxl-12 col-lg-12">
-                <div class="card border-0 pb-0">
-                    <div class="card-header border-0 pb-0">
+                <div class="pb-0 border-0 card">
+                    <div class="pb-0 border-0 card-header">
                         <h4 class="card-title">My Notifications</h4>
                     </div>
-                    <div class="card-body p-0"> 
-                        <div id="DZ_W_Todo2" class="widget-media dz-scroll height370 my-4 px-4">
+                    <div class="p-0 card-body"> 
+                        <div id="DZ_W_Todo2" class="px-4 my-4 widget-media dz-scroll height370">
                             <ul class="timeline">
                                 @forelse (auth()->user()->unreadNotifications as $note)
                                 <li>

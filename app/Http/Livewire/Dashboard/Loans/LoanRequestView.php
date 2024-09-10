@@ -46,7 +46,7 @@ class LoanRequestView extends Component
         // dd($requests);
         return view('livewire.dashboard.loans.loan-request-view',[
             'requests'=>$requests
-        ])->layout('layouts.main');
+        ])->layout('layouts.admin');
 
     }
 

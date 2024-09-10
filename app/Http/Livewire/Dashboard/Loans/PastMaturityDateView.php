@@ -36,7 +36,7 @@ class PastMaturityDateView extends Component
             ->where('final_due_date', '<', now())
             ->orderBy('id', 'desc')->get();
             return view('livewire.dashboard.loans.past-maturity-date-view')
-            ->layout('layouts.main');
+            ->layout('layouts.admin');
         }
         
 

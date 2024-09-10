@@ -68,7 +68,7 @@ class CreateSetting extends Component
         return view('livewire.dashboard.site-settings.create-setting', [
             'loan_child_types' => $this->loan_child_types,
             'loan_types' => $this->loan_types
-        ])->layout('layouts.main');
+        ])->layout('layouts.admin');
     }
 
     public function updatedSelectedLoanType($loanTypeId)

@@ -2,17 +2,17 @@
 <div class="page-content">
     <!-- start page title -->
     <div class="row">
-        <div class="px-4 col-12">
+        <div class="px-5 py-4 col-12">
             <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">Borrower Information</h4>
+                <h4 class="mb-sm-0 fw-bold">Borrower Information</h4>
 
-                <div class="page-title-right">
-                    <ol class="m-0 breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('borrowers') }}">Borrowers</a></li>
-                        <li class="breadcrumb-item active">Borrower Information</li>
-                    </ol>
-                </div>
+                    {{-- <div class="page-title-right">
+                        <ol class="m-0 breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('borrowers') }}">Borrowers</a></li>
+                            <li class="breadcrumb-item active">Borrower Information</li>
+                        </ol>
+                    </div> --}}
 
             </div>
         </div>
@@ -24,7 +24,7 @@
                     @php
                         $photoPath = $photo->source === 'admin' 
                             ? url('public/storage/' . $photo->path) 
-                            : 'https://app.capexfinancialservices.org/' . $photo->path;
+                            : 'https://minatasresources.com/' . $photo->path;
                     @endphp
                     <img src="{{ $photoPath }}" alt="user-img" class="rounded-sm img-thumbnail col-3" />
                 @endforeach
@@ -40,54 +40,55 @@
                 <img src="{{ $defaultImage }}" alt="user-img" class="rounded-sm img-thumbnail col-3" />
             @endif
         </div>
-        <div class="pt-4 mb-4 mb-lg-3 pb-lg-4 profile-wrapper">
-            <div class="row g-4">
-                <!--end col-->
-                <div class="col">
-                    <div class="p-2">
-                        <h3 class="mb-1"><b>{{ $user->fname.' '.$user->lname }}</b></h3>
-                        <div class="gap-1 hstack text-muted">
-                            <div class="me-2">
-                                <i class="align-bottom ri-card-line text-info fs-5 text-warning"></i><b>{{ $user->uuid  }}</b>
+        <div class="p-4 mb-4 profile-header bg-light-success rounded-3">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3 text-success"><b>{{ $user->fname.' '.$user->lname }}</b></h2>
+                        <div class="flex gap-3 mb-3 d-flex">
+                            <div class="p-2 badge bg-success-subtle text-success">
+                                <i class="bi bi-person-vcard-fill me-1"></i>
+                                <b>{{ $user->uuid }}</b>
                             </div>
-                            <div class="me-2"><i class="align-bottom ri-map-pin-user-line me-1 fs-16 text-warning"></i>{{ $user->address ?? 'No Address' }}</div>
-                            @if ($user->occupation || $user->jobTitle)
-                            <div class="me-2">
-                                <i class="align-bottom ri-building-line me-1 fs-16 text-warning"></i>{{ $user->jobTitle ?? $user->occupation ?? 'No Occupation'  }}
+                            @if($user->address)
+                            <div class="p-2 badge bg-success-subtle text-success">
+                                <i class="bi bi-geo-alt-fill me-1"></i>
+                                {{ $user->address }}
+                            </div>
+                            @endif
+                            @if($user->occupation || $user->jobTitle)
+                            <div class="p-2 badge bg-success-subtle text-success">
+                                <i class="bi bi-briefcase-fill me-1"></i>
+                                {{ $user->jobTitle ?? $user->occupation }}
                             </div>
                             @endif
                         </div>
+                        <div class="p-2 badge bg-success-subtle text-success">
+                            <i class="bi bi-archive-fill me-1"></i>
+                            <b>Source: {{ $user->usource ?? 'System Entry' }}</b>
+                        </div>
                     </div>
-                    <div class="p-2">
-                        <div class="gap-1 hstack text-muted">
-                            <div class="me-2">
-                                <i class="align-bottom ri-card-line text-info fs-5 text-warning"></i><b>{{ $user->usource  }}</b>
+                    <div class="col-lg-4">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="text-white border-0 card bg-success">
+                                    <div class="text-center card-body">
+                                        <h4 class="mb-2">K{{ App\Models\Loans::customer_balance($user->id) }}</h4>
+                                        <p class="mb-0 fs-7">Current Amount Owing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="text-white border-0 card bg-success">
+                                    <div class="text-center card-body">
+                                        <h4 class="mb-2">K{{ App\Models\Loans::customer_total_borrowed($user->id) }}</h4>
+                                        <p class="mb-0 fs-7">Total Amount Borrowed</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--end col-->
-                <div class="order-last col-12 col-lg-auto order-lg-0">
-                    <div class="text-center row text">
-                        <div class="col-lg-6 col-4">
-                            <div class="p-2">
-                                <h4 class="mb-1">K{{ App\Models\Loans::customer_balance($user->id) }}</h4>
-                                <p class="mb-0 fs-14 text-muted">Current Amount Owing</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-4">
-                            <div class="p-2">
-                                <h4 class="mb-1">K{{ App\Models\Loans::customer_total_borrowed($user->id) }}</h4>
-                                <p class="mb-0 fs-14 text-muted">Overall Total Amount Borrowed (Pending/Open/Closed)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--end col-->
-
             </div>
-            <!--end row-->
-        </div>
 
 
 
@@ -254,7 +255,7 @@
                                                 function getFileUrl($upload) {
                                                     return $upload->source === 'admin'
                                                         ? url('public/' . Storage::url($upload->path))
-                                                        : 'https://app.capexfinancialservices.org/public/' . Storage::url($upload->path);
+                                                        : 'https://minatasresources.com/public/' . Storage::url($upload->path);
                                                 }
 
                                                 function renderFileBlock($upload, $label, $user) {

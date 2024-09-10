@@ -18,6 +18,6 @@ class NewLoanView extends Component
         $this->products = $this->get_all_loan_products();
         $this->borrowers = User::role('user')->without('applications')->get();
         return view('livewire.dashboard.loans.new-loan-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 }

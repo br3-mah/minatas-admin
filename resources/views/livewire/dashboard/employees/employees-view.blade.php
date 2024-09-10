@@ -4,16 +4,16 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
+            <div class="p-3 col-12">
                 <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Employees</h4>
+                    <h4 class="mb-sm-0 fw-bold">Employees</h4>
 
-                    <div class="page-title-right">
+                    {{-- <div class="page-title-right">
                         <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                             <li class="breadcrumb-item active">Employees</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -32,7 +32,7 @@
                             <div class="mb-3 row g-4">
                                 <div class="col-sm-auto">
                                     <div>
-                                        <button type="button" class="btn btn-primary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="align-bottom ri-add-line me-1"></i> Add</button>
+                                        <button type="button" class="btn btn-primary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="align-bottom ri-add-line me-1"></i> Add New</button>
                                         {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button> --}}
                                     </div>
                                 </div>

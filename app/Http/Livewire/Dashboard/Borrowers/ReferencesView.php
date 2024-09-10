@@ -18,6 +18,6 @@ class ReferencesView extends Component
 
         // $this->authorize('view loan relatives');
         $this->related_parties = RelatedParty::get();
-        return view('livewire.dashboard.borrowers.references-view')->layout('layouts.main');
+        return view('livewire.dashboard.borrowers.references-view')->layout('layouts.admin');
     }
 }

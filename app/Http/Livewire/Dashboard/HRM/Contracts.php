@@ -8,6 +8,6 @@ class Contracts extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.h-r-m.contracts')->layout('layouts.main');
+        return view('livewire.dashboard.h-r-m.contracts')->layout('layouts.admin');
     }
 }

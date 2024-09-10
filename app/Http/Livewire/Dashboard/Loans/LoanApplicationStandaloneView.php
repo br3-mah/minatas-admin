@@ -23,7 +23,7 @@ class LoanApplicationStandaloneView extends Component
     public function render()
     {
         return view('livewire.dashboard.loans.loan-application-standalone-view')
-        ->layout('layouts.dashboard');
+        ->layout('layouts.admin');
     }
 
 }

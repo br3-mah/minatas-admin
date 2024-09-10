@@ -36,6 +36,6 @@ class DueLoanView extends Component
         }
         return view('livewire.dashboard.loans.due-loan-view',[
             'requests'=>$requests
-        ])->layout('layouts.main');
+        ])->layout('layouts.admin');
     }
 }

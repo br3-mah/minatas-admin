@@ -71,7 +71,7 @@ class DashboardView extends Component
                 'pendingLoansCount' => $this->pendingLoansCount,
                 'loansCount' => $this->loansCount,
                 'unresolvedLoansAmount' => $this->unresolvedLoansAmount,
-            ])->layout('layouts.main');
+            ])->layout('layouts.admin');
         }
     }
 

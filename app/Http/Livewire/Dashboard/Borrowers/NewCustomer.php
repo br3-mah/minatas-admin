@@ -8,6 +8,6 @@ class NewCustomer extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.borrowers.new-customer')->layout('layouts.main');
+        return view('livewire.dashboard.borrowers.new-customer')->layout('layouts.admin');
     }
 }

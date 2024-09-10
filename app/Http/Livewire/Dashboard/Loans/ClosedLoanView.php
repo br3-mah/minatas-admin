@@ -17,7 +17,7 @@ class ClosedLoanView extends Component
     {
         $this->loan_requests = $this->getClosedLoanRequests('auto');
         return view('livewire.dashboard.loans.closed-loan-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 
     public function exportClosedLoans(){

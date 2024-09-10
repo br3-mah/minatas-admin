@@ -98,7 +98,6 @@ trait LoanTrait{
         return User::whereDoesntHave('assigned_loans')->count() - 1;
     }
 
-
     public function total_loan_officers(){
         return User::whereDoesntHave('roles', function($query) {
             $query->where('name', 'user');
@@ -515,12 +514,12 @@ trait LoanTrait{
                     $mail = [
                         'name' => "{$data['fname']} {$data['lname']}",
                         'to' => $data['email'],
-                        'from' => 'admin@capexfinancialservices.org',
+                        'from' => 'admin@minatas.org',
                         'phone' => $data['phone'],
                         'payback' => Application::payback($data['amount'], $data['repayment_plan']),
                         'subject' => "{$data['type']} Loan Application",
-                        'message' => "Thank you for choosing us. Your loan request is submitted. Sign in with username {$data['email']} and password is 'capex+you' to check the status. We value your trust and are committed to your satisfaction.",
-                        'message2' => "Capex Finance"
+                        'message' => "Thank you for choosing us. Your loan request is submitted. Sign in with username {$data['email']} and password is 'minatas+you' to check the status. We value your trust and are committed to your satisfaction.",
+                        'message2' => "Minatas Finance"
                     ];
                     // Mail::to($data['email'])->send(new LoanApplication($mail));
                 }
@@ -659,7 +658,6 @@ trait LoanTrait{
                 ->where('applications.complete', '=', 1)
                 ->where('applications.user_id', '=', auth()->user()->id)
                 ->where('loan_installments.next_dates', '<', now())
-                ->whereNotNull('applications.type')
                 ->select('loans.id','users.fname', 'users.lname', 'applications.*', 'loan_installments.next_dates')
                 ->get();
         }else{
@@ -670,7 +668,6 @@ trait LoanTrait{
                 ->where('applications.status', '=', 1)
                 ->where('applications.complete', '=', 1)
                 ->where('loan_installments.next_dates', '<', now())
-                ->whereNotNull('applications.type')
                 ->select('loans.id','users.fname', 'users.lname', 'applications.*', 'loan_installments.next_dates')
                 ->get();
         }

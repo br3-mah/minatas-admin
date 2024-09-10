@@ -17,7 +17,7 @@ use Illuminate\Support\Collection;
 
 trait UserTrait{
     public function registerUser($input){
-        $password = 'capex+2024';
+        $password = 'minatas+you';
 
         if($input['email'] !== null){
             $check = User::where('email', $input['email'])->exists();

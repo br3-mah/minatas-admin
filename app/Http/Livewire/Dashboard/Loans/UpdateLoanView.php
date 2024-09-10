@@ -78,6 +78,6 @@ class UpdateLoanView extends Component
     public function render()
     {
         return view('livewire.dashboard.loans.update-loan-view')
-            ->layout('layouts.main');
+            ->layout('layouts.admin');
     }
 }

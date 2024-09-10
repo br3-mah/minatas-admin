@@ -55,7 +55,7 @@ trait CalculatorTrait{
     public function calculateEqualInstallment(array $data){
 
         // API endpoint URL
-        $api_url = 'https://admin.capexfinancialservices.org/api/calculate-reducing-balance';
+        $api_url = 'https://admin.minatas.com/api/calculate-reducing-balance';
         $lp = $this->get_loan_product($data['loan_product_id']);
         $loan_interest_value = $this->lp->def_loan_interest / 100;
         $principal = $lp->def_loan_amount ?? 0;

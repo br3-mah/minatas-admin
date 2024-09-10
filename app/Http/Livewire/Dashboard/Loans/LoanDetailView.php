@@ -42,7 +42,7 @@ class LoanDetailView extends Component
         $this->change_status();
         $this->init_data();
         return view('livewire.dashboard.loans.loan-detail-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 
     public function init_data(){

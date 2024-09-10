@@ -3,15 +3,15 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
+            <div class="p-3 col-12">
                 <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Add Loan Information</h4>
-                    <div class="page-title-right">
+                    <h4 class="mb-sm-0 fw-bold">Add Loan Information</h4>
+                    {{-- <div class="page-title-right">
                         <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Loans</a></li>
                             <li class="breadcrumb-item active">Add Loan Information</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -20,7 +20,7 @@
 
         <div class="row">
 
-            <div class="col-xxl-6">
+            <div class="col-xxl-12 col-xl-12"> 
                 <div class="card">
                     <div class="card-header align-items-center d-flex">
                         <h4 class="mb-0 text-warning card-title flex-grow-1">Loan Information</h4>

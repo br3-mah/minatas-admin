@@ -33,7 +33,7 @@ class CreateLoanView extends Component
 
     public function render()
     {
-        return view('livewire.dashboard.loans.create-loan-view')->layout('layouts.main');
+        return view('livewire.dashboard.loans.create-loan-view')->layout('layouts.admin');
     }
 
     public function updatedSelectedLoanType($loanTypeId)

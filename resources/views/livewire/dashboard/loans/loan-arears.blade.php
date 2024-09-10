@@ -3,34 +3,34 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-                    <h4 class="mb-sm-0">Loan Arears</h4>
+            <div class="py-3 col-12">
+                <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 fw-bold">Loan Arears</h4>
 
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
+                    {{-- <div class="page-title-right">
+                        <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                             <li class="breadcrumb-item active">Loan Arears</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="alert alert-danger" role="alert">
-            This is <strong>Datatable</strong> page in wihch we have used <b>jQuery</b> with cnd link!
+        <div class="p-2 mb-2 rounded bg-light-success" role="alert">
+            Loan arrears happen when a borrower misses payments on their loan. This can lead to extra fees, damage to credit, and potential legal actions.
         </div>
 
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title mb-0">Loan Arears</h5>
+                        <h5 class="mb-0 card-title">Loan Arears</h5>
                     </div>
                     <div class="card-body">
-                        <table id="fixed-header" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
+                        <table id="fixed-header" class="table align-middle table-bordered dt-responsive nowrap table-striped" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Loan #.</th>
@@ -86,8 +86,8 @@
                                     </tr>
                                     @endif
                                 @empty
-                                <div class="intro-y col-span-12 md:col-span-6">
-                                    <div class="box text-center">
+                                <div class="col-span-12 intro-y md:col-span-6">
+                                    <div class="text-center box">
                                         <p>Nothing Found.</p>
                                     </div>
                                 </div>

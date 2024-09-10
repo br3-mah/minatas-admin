@@ -29,7 +29,6 @@ class MissedRepaymentsView extends Component
         $roles = Role::orderBy('id','DESC')->paginate(5);
         $users = User::latest()->paginate(7);
         $this->mssd_repays = $this->missed_repayments();
-
         
         if (auth()->user()->hasRole('user')) {
             return view('livewire.dashboard.loans.missed-repayments-view',[
@@ -40,7 +39,7 @@ class MissedRepaymentsView extends Component
             return view('livewire.dashboard.loans.missed-repayments-view',[
                 'users' => $users,
                 'roles' => $roles
-            ])->layout('layouts.main');
+            ])->layout('layouts.admin');
         }
     }    
     

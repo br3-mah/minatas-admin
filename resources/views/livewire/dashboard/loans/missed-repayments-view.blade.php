@@ -3,23 +3,23 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-                    <h4 class="mb-sm-0">Missed Repayments</h4>
+            <div class="py-3 col-12">
+                <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 fw-bold">Missed Repayments</h4>
 
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
+                    {{-- <div class="page-title-right">
+                        <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                             <li class="breadcrumb-item active">Missed Repayments</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="alert alert-info" role="alert">
+        <div class="p-2 mb-2 bg-light-success" role="alert">
             List of loans which have missed their installments.
         </div>
 
@@ -27,10 +27,10 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title mb-0">Missed Repayment Loans</h5>
+                        <h5 class="mb-0 card-title">Missed Repayment Loans</h5>
                     </div>
                     <div class="card-body">
-                        <table id="fixed-header" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
+                        <table id="fixed-header" class="table align-middle table-bordered dt-responsive nowrap table-striped" style="width:100%">
                             <thead>
                                 <tr class="fw-bold text-muted">
                                     <th class="actions-btns"></th>
@@ -66,7 +66,7 @@
                                         </a>
                                     </td>
 
-                                    <td style="text-align: center;">{{ $user->type }} Loan</td>
+                                    <td style="text-align: center;"> Loan</td>
                                     <td style="text-align: center;">K{{ $user->amount }}</td>
                                     <td style="text-align: center;">K{{ App\Models\Loans::loan_balance($user->id) }}</td>
                                     <td style="text-align: center;"><a href="javascript:void(0);"><strong>K{{ App\Models\Application::monthly_installment($user->amount, $user->repayment_plan) }}</strong></a></td>
@@ -79,10 +79,10 @@
                                     </td>
                                     <td class="actions-btns">
                                         <div class="d-flex">
-                                            <a target="_blank" href="{{ route('client-account', ['key'=>$user->user_id]) }}" class="btn btn-primary shadow btn-xs sharp me-1">
+                                            <a target="_blank" href="{{ route('client-account', ['key'=>$user->user_id]) }}" class="shadow btn btn-primary btn-xs sharp me-1">
                                                 <i class="fas fa-user-alt"></i>
                                             </a>
-                                            <a target="_blank" href="{{ route('loan-details', ['id'=>$user->id]) }}" class="btn btn-light shadow btn-xs sharp me-1">
+                                            <a target="_blank" href="{{ route('loan-details', ['id'=>$user->id]) }}" class="shadow btn btn-light btn-xs sharp me-1">
                                                 <i class="fas fa-file"></i>
                                             </a>
                                             <a title="Track Loan Repayments" href="track-repayments/{{$user->id}}">  
@@ -96,8 +96,8 @@
                                     </td>												
                                 </tr>
                                 @empty
-                                <div class="intro-y col-span-12 md:col-span-6">
-                                    <div class="box text-center">
+                                <div class="col-span-12 intro-y md:col-span-6">
+                                    <div class="text-center box">
                                         <p>No User Found</p>
                                     </div>
                                 </div>

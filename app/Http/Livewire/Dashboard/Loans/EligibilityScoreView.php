@@ -19,6 +19,6 @@ class EligibilityScoreView extends Component
         $this->net_pay_alr = $this->loan->user->net_pay - $this->monthly_payment;  
         $this->maximum_deductable_amount = $this->net_pay_alr * 0.75;
         $this->total_collectable = Application::payback($this->loan->amount, $this->loan->repayment_plan);
-        return view('livewire.dashboard.loans.eligibility-score-view')->layout('layouts.main');
+        return view('livewire.dashboard.loans.eligibility-score-view')->layout('layouts.admin');
     }
 }

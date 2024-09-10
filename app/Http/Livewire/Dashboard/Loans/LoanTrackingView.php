@@ -16,6 +16,6 @@ class LoanTrackingView extends Component
     public function render()
     {
         return view('livewire.dashboard.loans.loan-tracking-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 }

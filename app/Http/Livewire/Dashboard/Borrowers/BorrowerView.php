@@ -47,7 +47,7 @@ class BorrowerView extends Component
             'users' => $users,
             'roles' => $roles
         ])
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 
     public function borrowerExcelExport(){

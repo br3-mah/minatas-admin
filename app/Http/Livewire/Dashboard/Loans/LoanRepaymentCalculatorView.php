@@ -11,7 +11,7 @@ class LoanRepaymentCalculatorView extends Component
     {
         $this->rate = 20;
         return view('livewire.dashboard.loans.loan-repayment-calculator-view')
-        ->layout('layouts.dashboard');
+        ->layout('layouts.admin');
     }
 
     public function mount(){

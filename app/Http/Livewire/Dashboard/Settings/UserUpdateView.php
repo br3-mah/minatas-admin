@@ -26,6 +26,6 @@ class UserUpdateView extends Component
     public function render()
     {
         return view('livewire.dashboard.settings.user-update-view')
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 }

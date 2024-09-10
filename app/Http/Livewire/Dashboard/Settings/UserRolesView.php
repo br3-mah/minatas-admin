@@ -32,7 +32,7 @@ class UserRolesView extends Component
             'roles' => $roles,
             'permissions' => $permissions
         ])
-        ->layout('layouts.main');
+        ->layout('layouts.admin');
     }
 
     public function store(){

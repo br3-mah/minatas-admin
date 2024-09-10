@@ -13,6 +13,6 @@ class NoRepayments extends Component
 
     public function render(){
         $this->loan_requests = $this->getNoRepaymentLoan('auto');
-        return view('livewire.dashboard.loans.no-repayments')->layout('layouts.main');
+        return view('livewire.dashboard.loans.no-repayments')->layout('layouts.admin');
     }
 }

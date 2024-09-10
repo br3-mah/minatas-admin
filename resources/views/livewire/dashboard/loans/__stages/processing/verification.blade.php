@@ -89,7 +89,7 @@
                 function getFileUrl($upload) {
                     return $upload->source === 'admin'
                         ? url('public/' . Storage::url($upload->path))
-                        : 'https://app.capexfinancialservices.org/public/' . Storage::url($upload->path);
+                        : 'https://minatasresources.com/public/' . Storage::url($upload->path);
                 }
 
                 function renderFileBlock($upload, $label, $user) {

@@ -45,17 +45,10 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
+            <div class="p-3 col-12">
                 <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Repayments</h4>
-
-                    <div class="page-title-right">
-                        <ol class="m-0 breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Repayments</li>
-                        </ol>
-                    </div>
-
+                    <h4 class="mb-sm-0 fw-bold">Repayments</h4>
+                    
                 </div>
             </div>
         </div>
@@ -73,7 +66,7 @@
                             <div class="mb-3 row g-4">
                                 <div class="col-sm-auto">
                                     <div>
-                                        <button type="button" class="btn btn-primary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i class="align-bottom ri-add-line me-1"></i> Add Transaction </button>
+                                        <button type="button" class="btn btn-sm btn-primary add-btn" data-bs-toggle="modal" id="create-btn" data-bs-target="#showModal"><i title="Make a loan repayment transaction" class="align-bottom ri-add-line me-1"></i> Repay Loan (Add Transaction)</button>
                                         {{-- <button class="btn btn-soft-danger" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button> --}}
                                     </div>
                                 </div>

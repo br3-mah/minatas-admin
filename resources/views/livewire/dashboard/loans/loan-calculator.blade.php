@@ -1,26 +1,19 @@
 
-<div class="page-content">
+<div class=" page-content">
+
     <div class="row">
-        <div class="px-4 col-12">
+        <div class="px-5 py-4 col-12">
             <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0">Loan Calculator</h4>
-
-                <div class="page-title-right">
-                    <ol class="m-0 breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Loan Calculator</li>
-                    </ol>
-                </div>
-
+                <h4 class="mb-sm-0 fw-bold">Loan Calculator</h4>
             </div>
         </div>
     </div>
 
     <div class="px-8">
         @if ($amortization_table)
-        <div class="mt-2 card">
-            <div class="card-header bg-warning">
-                <h3 class="text-white card-title">Amortization Table</h3>
+        <div class="px-3 mt-2 card">
+            <div class="card-header bg-light-success">
+                <h3 class="text-primary card-title">Amortization Table</h3>
             </div>
             <div class="card-body bg-info">
                 <table class="table text-white bg-info table-condensed table-hover">
@@ -59,17 +52,17 @@
     </div>
 
 
-    <div class="post d-flex flex-column-fluid" id="kt_post">
+    <div class="px-4 post d-flex flex-column-fluid" id="kt_post">
         <form wire:submit.prevent="calculateLoan()" id="kt_content_container" class="container-xxl">
-            <div class="border-0 cursor-pointer card-header">
-                <div class="mt-2 alert alert-primary">
+            <div class="border-0 rounded cursor-pointer card-header">
+                <div class="p-2 mt-2 rounded-lg bg-primary">
                     <small>
-                        You can use this page to calculate the loan value in case of customer inquiries. To add a loan into the system, visit Loans(left menu) → <a href="{{ route('new-loan') }}">Add Loan</a>.
+                        You can use this page to calculate the loan value in case of customer inquiries. To add a loan into the system, visit Loans(left menu) → <a class="text-warning" href="{{ route('new-loan') }}">Add a New Loan</a>.
                     </small>
                 </div>
             </div>
-            <div class="mb-5 card mb-xl-10">
-                <div class="px-10 py-6 mb-6 row">
+            <div class="mt-2 mb-5 card mb-xl-10">
+                <div class="px-4 py-6 mb-6 row">
                     <label class="col-lg-4 col-form-label required fw-bold fs-6">Loan Product</label>
                     <div class="col-lg-8 fv-row">
                         <select type="text" wire:model.lazy="loan_product_id" class="my-2 form-control"  wire:change="prefillLoanProductValues"  placeholder="E.g Business Loan" required>
@@ -82,14 +75,9 @@
                     </div>
                 </div>
 
-                <div class="border-0 card-header bg-warning" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+                <div class="px-3 py-2 border-0 bg-light fw-bold" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                     <div class="m-0 card-title">
-                        <h3 class="m-0 text-white fw-bold">Loan Terms:</h3>
-                    </div>
-                </div>
-                <div class="border-0 cursor-pointer card-header" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
-                    <div class="m-0 card-title">
-                        <h3 class="m-0 text-white fw-bold text-danger">Principal</h3>
+                        <h3 class="m-0 text-primary fw-bold">Loan Terms:</h3>
                     </div>
                 </div>
                 <div id="kt_account_settings_profile_details" class="collapse show">
@@ -111,10 +99,10 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="border-0 cursor-pointer card-header" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+                
+                <div class="px-3 py-2 border-0 bg-light fw-bold" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                     <div class="m-0 card-title">
-                        <h3 class="m-0 fw-bold text-danger">Interest:</h3>
+                        <h3 class="m-0 fw-bold text-primary">Interest:</h3>
                     </div>
                 </div>
                 <div id="kt_account_settings_profile_details" class="collapse show">
@@ -141,7 +129,7 @@
                                             <span class="path2"></span>
                                             <span class="path3"></span>
                                         </i>
-                                    </span>
+                                </span>
                                 </label>
                                 <div class="col-lg-8 fv-row">
                                     <div class="mt-3 d-block align-items-center">
@@ -163,7 +151,7 @@
                                         <input type="text" wire:model.lazy="loan_interest_value" class="my-2 form-control " placeholder="%" required/>
                                     </div>
                                     <div class="col-lg-3">
-                                        <select type="text" wire:model.lazy="loan_interest_period" class="form-select form-control " placeholder="Company name" value="Keenthemes">
+                                        <select type="text" wire:model.lazy="loan_interest_period" class="form-select form-control " placeholder="Company name" value="">
                                             <option value="per-day">Per Day</option>
                                             <option value="per-week">Per Week</option>
                                             <option value="per-month" selected>Per Month</option>
@@ -176,10 +164,10 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="border-0 cursor-pointer card-header" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+                
+                <div class="px-3 py-2 border-0 bg-light fw-bold" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                     <div class="m-0 card-title">
-                        <h3 class="m-0 fw-bold text-danger">Duration:</h3>
+                        <h3 class="m-0 fw-bold text-primary">Duration:</h3>
                     </div>
                 </div>
                 <div id="kt_account_settings_profile_details" class="collapse show">
@@ -190,13 +178,13 @@
                                 <div class="col-lg-8 fv-row row d-flex">
                                     <div class="col-lg-6">
                                         <div class="col-lg-8 input-group">
-                                            <button class="btn btn-warning" type="button" wire:click="decreaseDurationValue">
+                                            <button class="btn btn-success" type="button" wire:click="decreaseDurationValue">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
                                                 </svg>
                                             </button>
                                             <input type="text" wire:model.lazy="loan_duration_value" class="form-control" placeholder="" required>
-                                            <button class="btn btn-warning" type="button" wire:click="increaseDurationValue">
+                                            <button class="btn btn-success" type="button" wire:click="increaseDurationValue">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
                                                 </svg>
@@ -216,10 +204,10 @@
                         </div>
                     </div>
                 </div>
-                <hr>
-                <div class="py-3 border-0 cursor-pointer card-header" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+                
+                <div class="px-3 py-2 border-0 bg-light fw-bold" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
                     <div class="m-0 card-title">
-                        <h3 class="m-0 fw-bold text-danger">Repayments:</h3>
+                        <h3 class="m-0 fw-bold text-primary">Repayments:</h3>
                     </div>
                 </div>
                 <div id="kt_account_settings_profile_details" class="collapse show">
@@ -241,13 +229,13 @@
                                 <label class="col-lg-4 col-form-label required fw-bold fs-6">Minimum Number of Repayments</label>
                                 <div class="col-lg-8 fv-row">
                                     <div class="col-lg-8 input-group">
-                                        <button class="btn btn-warning" type="button" wire:click="decreaseRepayments">
+                                        <button class="btn btn-success" type="button" wire:click="decreaseRepayments">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8"/>
                                             </svg>
                                         </button>
                                         <input type="text" wire:model.lazy="minimum_num_of_repayments" class="form-control" placeholder="1">
-                                        <button class="btn btn-warning" type="button" wire:click="increaseRepayments">
+                                        <button class="btn btn-success" type="button" wire:click="increaseRepayments">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
                                             </svg>

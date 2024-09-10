@@ -35,7 +35,7 @@ class LoanViewAllView extends Component
             }
             return view('livewire.dashboard.loans.loan-view-all-view',[
                 'requests'=>$requests
-            ])->layout('layouts.main');
+            ])->layout('layouts.admin');
         }catch (\Throwable $th) {
             dd($th);
         }

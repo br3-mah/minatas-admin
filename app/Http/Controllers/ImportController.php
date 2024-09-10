@@ -127,7 +127,7 @@ class ImportController extends Controller
                                         'address' => $row['I'],
                                         'gender' =>  $row['J'],
                                         'employeeNo' => $row['K'],
-                                        'password' => 'capex+2024'
+                                        'password' => 'minatas+2024'
                                     ]);
                                 }
                             }

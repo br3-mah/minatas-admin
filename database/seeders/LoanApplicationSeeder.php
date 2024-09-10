@@ -19,9 +19,9 @@ class LoanApplicationSeeder extends Seeder
     public function run()
     {
         User::create([
-            'fname' => 'Bremah',
-            'lname' => 'George',
-            'email' => 'nyeleti.bremah@gmail.com',
+            'fname' => 'Ian',
+            'lname' => 'Phiri',
+            'email' => 'ian@gmail.com',
             'phone' => '0772147755',
             'password' => bcrypt('2024'),
         ])->assignRole('user');

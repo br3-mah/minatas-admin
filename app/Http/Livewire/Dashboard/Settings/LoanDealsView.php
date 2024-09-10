@@ -12,7 +12,7 @@ class LoanDealsView extends Component
     {
         $this->authorize('view system settings');
         return view('livewire.dashboard.settings.loan-deals-view')
-        ->layout('layouts.dashboard');
+        ->layout('layouts.admin');
     }
     public function store(){
 

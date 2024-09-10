@@ -13,6 +13,6 @@ class ThreeMonthLate extends Component
 
     public function render(){
         $this->loan_requests = $this->getThreeMonthLate('auto');
-        return view('livewire.dashboard.loans.three-month-late')->layout('layouts.main');
+        return view('livewire.dashboard.loans.three-month-late')->layout('layouts.admin');
     }
 }

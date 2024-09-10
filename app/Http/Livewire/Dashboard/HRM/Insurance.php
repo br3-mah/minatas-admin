@@ -8,6 +8,6 @@ class Insurance extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.h-r-m.insurance')->layout('layouts.main');
+        return view('livewire.dashboard.h-r-m.insurance')->layout('layouts.admin');
     }
 }

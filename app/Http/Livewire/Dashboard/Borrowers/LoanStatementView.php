@@ -31,7 +31,7 @@ class LoanStatementView extends Component
             ->layout('layouts.dashboard');
         }else{
             return view('livewire.dashboard.borrowers.loan-statement-view')
-            ->layout('layouts.main');
+            ->layout('layouts.admin');
         }
     }
 

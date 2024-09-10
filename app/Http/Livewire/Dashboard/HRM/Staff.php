@@ -8,6 +8,6 @@ class Staff extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.h-r-m.staff')->layout('layouts.main');
+        return view('livewire.dashboard.h-r-m.staff')->layout('layouts.admin');
     }
 }

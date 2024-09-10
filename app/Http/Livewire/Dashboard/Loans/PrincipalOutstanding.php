@@ -13,6 +13,6 @@ class PrincipalOutstanding extends Component
 
     public function render(){
         $this->loan_requests = $this->getPrincipalOutstandingLoan('auto');
-        return view('livewire.dashboard.loans.principal-outstanding')->layout('layouts.main');
+        return view('livewire.dashboard.loans.principal-outstanding')->layout('layouts.admin');
     }
 }

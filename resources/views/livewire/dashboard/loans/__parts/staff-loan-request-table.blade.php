@@ -3,16 +3,16 @@
 
         <!-- start page title -->
         <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-                    <h4 class="mb-sm-0">{{ $this->title }}</h4>
+            <div class="py-3 col-12">
+                <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0 fw-bold">{{ $this->title }}</h4>
 
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
+                    {{-- <div class="page-title-right">
+                        <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
                             <li class="breadcrumb-item active">{{ $this->title }}</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -23,53 +23,36 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title mb-0">Recent loan requests list</h5>
+                        <h5 class="mb-0 card-title">Recent loan requests list</h5>
                     </div>
                     <div class="card-body">
                         <div class="row g-2">
                             <div class="col-sm-4">
                             </div>
                             <div class="col-sm-auto ms-auto">
-                                <div class="list-grid-nav hstack gap-1 mb-2">
+                                <div class="gap-1 mb-2 list-grid-nav hstack">
                                     @if(request()->route()->getName() == 'view-loan-requests')
-                                        <button onclick="resetBulk()" type="button" id="resetBtn" class="btn btn-sm btn-flex btn-light" data-bs-toggle="modal" data-bs-target="#kt_modal_add_payment">
-                                            <i class="ki-duotone ki-plus-cross fs-3">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                            </i>Reset
+                                        <button onclick="resetBulk()" type="button" id="resetBtn" class="btn btn-sm text-dark btn-light" data-bs-toggle="modal" data-bs-target="#kt_modal_add_payment">
+                                           Reset
                                         </button>
-                                        <button onclick="deleteBulk()" type="button" id="deleteBtn" class="btn mx-2 btn-sm btn-flex btn-light-danger"
-                                            data-bs-toggle="modal" data-bs-target="#kt_modal_add_payment">
-                                            <i class="ki-duotone ki-plus-cross fs-3">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                            </i>Delete
-                                        </button>
-                                        <button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                            <i class="ki-duotone ki-category fs-6">
-                                                <span class="path1"></span>
-                                                <span class="path2"></span>
-                                                <span class="path3"></span>
-                                                <span class="path4"></span>
-                                            </i>
+                                        <button onclick="deleteBulk()" type="button" id="deleteBtn" class="btn btn-sm btn-danger"
+                                            data-bs-toggle="modal" data-bs-target="#kt_modal_add_payment">Delete
                                         </button>
                                     @endif
-                                    <button class="btn btn-info addMembers-modal" data-bs-toggle="modal" data-bs-target="#exportModal"><i class="ri-add-fill me-1 align-bottom"></i> Export XLS</button>
+                                    <button class="btn btn-info btn-sm addMembers-modal" data-bs-toggle="modal" data-bs-target="#exportModal"><i class="align-bottom ri-add-fill me-1"></i> Export XLS</button>
                                     @if (Route::currentRouteName() !== 'approved-loans')
-                                        <a href="{{ route('proxy-loan-create') }}" class="btn btn-primary"><i class="ri-add-fill me-1 align-bottom"></i> Add New Loan</a>
+                                        <a href="{{ route('proxy-loan-create') }}" class="btn btn-primary btn-sm"><i class="align-bottom ri-add-fill me-1"></i> Add New Loan</a>
                                     @endif
                                 </div>
                             </div>
                             <!--end col-->
                         </div>
-                        <table id="loanReqTable" class="table table-bordered dt-responsive nowrap table-striped align-middle" style="width:100%">
+                        <table id="loanReqTable" class="display" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th scope="col" style="width: 10px;">
+                                    <th>
                                         <div class="form-check">
-                                            <input onclick="showBulkOps()" class="form-check-input fs-15" type="checkbox" id="checkAll" value="1">
+                                            {{-- <input onclick="showBulkOps()" class="" type="checkbox" id="checkAll" value="1"> --}}
                                         </div>
                                     </th>
                                     <th>Loan No.</th>
@@ -97,10 +80,10 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="form-check">
-                                            <input onclick="showBulkOps()" class="form-check-input fs-15" type="checkbox" name="items[]" value="{{ $loan->id }}">
+                                            <input onclick="showBulkOps()" class="" type="checkbox" name="items[]" value="{{ $loan->id }}">
                                         </div>
                                     </th>
-                                    <td>{{ $loan->uuid }}</td>
+                                    <td class="fw-bold">{{ $loan->uuid }}</td>
                                     <td>{{ $loan->loan_product->name }}</td>
                                     <td>K {{ number_format($loan->amount, 2, '.', ',') }}</td>
                                     <td>
@@ -115,7 +98,7 @@
                                         }}
                                         Upto {{ $loan->repayment_plan }} Months
                                     </td>--}}
-                                    <td>{{  $loan->source }}</td> 
+                                    <td>{{  $loan->source ?? 'System' }}</td> 
 
                                     <td>
                                         @if($loan->status == 0)
@@ -172,13 +155,13 @@
                                     <td>
                                         <div class="dropdown d-inline-block">
                                             <button class="btn btn-primary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="ri-more-fill align-middle"></i>
+                                                Manage
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a href="{{ route('detailed',['id' => $loan->id]) }}" class="dropdown-item"><i class="ri-eye-fill align-bottom me-2 text-muted"></i> View</a></li>
+                                                <li><a href="{{ route('detailed',['id' => $loan->id]) }}" class="dropdown-item"><i class="align-bottom ri-eye-fill me-2 text-muted"></i> View</a></li>
                                                 @if (Route::currentRouteName() === 'view-loan-requests')
-                                                    <li><a href="{{ route('loan-details', ['id' => $loan->id]) }}" class="dropdown-item edit-item-btn"><i class="ri-exchange-funds-fill align-bottom me-2 text-muted"></i> Asses Loans</a></li>
-                                                    <li><a href="{{ route('edit-loan', ['id' => $loan->id]) }}" class="dropdown-item edit-item-btn"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</a></li>
+                                                    <li><a href="{{ route('loan-details', ['id' => $loan->id]) }}" class="dropdown-item edit-item-btn"><i class="align-bottom ri-exchange-funds-fill me-2 text-muted"></i> Asses Loans</a></li>
+                                                    <li><a href="{{ route('edit-loan', ['id' => $loan->id]) }}" class="dropdown-item edit-item-btn"><i class="align-bottom ri-pencil-fill me-2 text-muted"></i> Edit</a></li>
                                                 @endif
                                             </ul>
                                         </div>

@@ -13,6 +13,6 @@ class LoanArears extends Component
 
     public function render(){
         $this->loan_requests = $this->getLoanArears('auto');
-        return view('livewire.dashboard.loans.loan-arears')->layout('layouts.main');
+        return view('livewire.dashboard.loans.loan-arears')->layout('layouts.admin');
     }
 }

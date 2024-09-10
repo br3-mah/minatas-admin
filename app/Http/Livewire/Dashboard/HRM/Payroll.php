@@ -8,6 +8,6 @@ class Payroll extends Component
 {
     public function render()
     {
-        return view('livewire.dashboard.h-r-m.payroll')->layout('layouts.main');
+        return view('livewire.dashboard.h-r-m.payroll')->layout('layouts.admin');
     }
 }

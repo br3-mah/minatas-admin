@@ -45,7 +45,7 @@ class LoanCalculator extends Component
         $this->interest_methods = InterestMethod::get();
         $this->interest_types = InterestType::get();
         $this->repayment_cycles = RepaymentCycle::get();
-        return view('livewire.dashboard.loans.loan-calculator')->layout('layouts.main');
+        return view('livewire.dashboard.loans.loan-calculator')->layout('layouts.admin');
     }
 
     public function prefillLoanProductValues(){

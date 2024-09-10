@@ -13,6 +13,6 @@ class OneMonthLate extends Component
 
     public function render(){
         $this->loan_requests = $this->getOneMonthLate('auto');
-        return view('livewire.dashboard.loans.one-month-late')->layout('layouts.main');
+        return view('livewire.dashboard.loans.one-month-late')->layout('layouts.admin');
     }
 }

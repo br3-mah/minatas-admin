@@ -2,16 +2,16 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-12">
+            <div class="py-3 col-12">
                 <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Loan Application Details</h4>
+                    <h4 class="mb-sm-0 fw-bold">Loan Application Details</h4>
 
-                    <div class="page-title-right">
+                    {{-- <div class="page-title-right">
                         <ol class="m-0 breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                             <li class="breadcrumb-item active">Loan Application Details</li>
                         </ol>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card mt-n4 mx-n4 card-border-effect-none">
-                    <div class="bg-primary-subtle">
+                    <div class="rounded bg-success">
                         <div class="px-4 pb-0 card-body">
                             <div class="mb-3 row">
                                 <div class="col-md">
@@ -33,9 +33,9 @@
                                                             $photo = $loan->user->photos->first();
                                                             $photoPath = $photo->source === 'admin' 
                                                                 ? url('public/storage/' . $photo->path) 
-                                                                : 'https://app.capexfinancialservices.org/' . $photo->path;
+                                                                : 'https://minatasresources.com/' . $photo->path;
                                                         @endphp
-                                                        <img src="{{ $photoPath }}" alt="{{ $loan->user->fname }}" class="rounded-circle avatar-lg" />
+                                                        <img width="30" src="{{ $photoPath }}" alt="{{ $loan->user->fname }}" class="rounded-circle avatar-lg" />
                                                     @else
                                                         @php
                                                             $defaultImage = '../public/assets/images/user.png';
@@ -45,7 +45,7 @@
                                                                 $defaultImage = '../public/assets/images/boy.png';
                                                             }
                                                         @endphp
-                                                        <img src="{{ $defaultImage }}" alt="{{ $loan->user->fname }}" class="rounded-circle avatar-lg" />
+                                                        <img width="30" src="{{ $defaultImage }}" alt="{{ $loan->user->fname }}" class="rounded-circle avatar-lg" />
                                                     @endif
                                                 </div>
                                             </div>
@@ -293,7 +293,7 @@
                                                         function getFileUrl($upload) {
                                                             return $upload->source === 'admin'
                                                                 ? url('public/' . Storage::url($upload->path))
-                                                                : 'https://app.capexfinancialservices.org/public/' . Storage::url($upload->path);
+                                                                : 'https://minatasresources.com/public/' . Storage::url($upload->path);
                                                         }
 
                                                         function renderFileBlock($upload, $label, $user) {
