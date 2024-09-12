@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::apiResource('apply-loan', LoanRequestController::class);
+Route::post('apply-loan', [LoanApplicationController::class, 'websiteApply']);
 Route::post('register', [UserAuthenticationController::class, 'register']);
 Route::post('login', [UserAuthenticationController::class, 'login']);
 Route::post('verify-otp', [OTPController::class, 'verifyOTP']);
@@ -41,7 +41,6 @@ Route::post('upload-files', [UserController::class, 'uploadFiles']);
 Route::get('/get-application/{id}',[LoanRequestController::class, 'getLoan']);
 
 // Functions
-Route::post('request-for-loan', [LoanApplicationController::class, 'store']);
 Route::post('apply-for-loan', [LoanApplicationController::class, 'new_loan']);
 Route::get('get-my-loans/{id}', [LoanRequestController::class, 'getMyLoans']);
 

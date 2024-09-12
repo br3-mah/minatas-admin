@@ -499,6 +499,35 @@ trait LoanTrait{
         }
     }
 
+    public function createQuickLoan(array $data)
+    {
+        // Check if the user already has an active loan (status 1 or 2) that is not closed or completed
+        $hasLoan = Application::where('user_id', $data['user_id'])
+            ->where(function ($query) {
+                $query->where('status', 0)
+                    ->orWhere('status', 2);
+            })
+            ->where('closed', 0)
+            ->where('complete', 0)
+            ->orderBy('created_at', 'desc')
+            ->first();
+            
+        // If no active loan is found, create a new loan application
+        if ($hasLoan == null) {
+            return Application::create([
+                'amount' => $data['amount'],
+                'repayment_plan' => $data['duration'],
+                'loan_product_id' => $data['loan_product_id'],
+                'status' => 0, // Assuming 0 is the status for a new loan request
+                'source' => 'Website',
+                'user_id' => $data['user_id'],
+            ]);
+        }
+    
+        // If an active loan exists, return the existing loan
+        return $hasLoan;
+    }
+
     public function apply_loan($data)
     {
         try {

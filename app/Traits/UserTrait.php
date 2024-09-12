@@ -17,7 +17,7 @@ use Illuminate\Support\Collection;
 
 trait UserTrait{
     public function registerUser($input){
-        $password = 'minatas+you';
+        $password = '2121';
 
         if($input['email'] !== null){
             $check = User::where('email', $input['email'])->exists();
@@ -27,19 +27,12 @@ trait UserTrait{
                     $user = User::create([
                         'fname' => $input['fname'],
                         'lname' => $input['lname'],
-                        'mname' => $input['mname'],
                         'phone' => $input['phone'],
                         'email' => $input['email'],
                         'password' => Hash::make($password),
                         'terms' => 'accepted'
                     ]);
                     $user->assignRole('user');
-
-                    // Get my applications
-                    Wallet::create([
-                        'email' => $user->email ?? '',
-                        'user_id' => $user->id
-                    ]);
                     return $user;
                 } catch (\Throwable $th) {
                     return 0;
@@ -48,32 +41,29 @@ trait UserTrait{
                 // User already exists
                 return User::where('email', $input['email'])->first();
             }
-
-
-        }else{
-            try {
-                $user = User::create([
-                    'fname' => $input['fname'],
-                    'mname' => $input['mname'],
-                    'phone2' => $input['phone2'],
-                    'lname' => $input['lname'],
-                    'password' => Hash::make($password),
-                    'terms' => 'accepted'
-                ]);
-                $user->assignRole('user');
-
-                // Get my applications
-                Wallet::create([
-                    'email' => $user->email ?? '',
-                    'user_id' => $user->id
-                ]);
-                return $user;
-            } catch (\Throwable $th) {
-                return 0;
-            }
         }
+        // else{
+        //     try {
+        //         $user = User::create([
+        //             'fname' => $input['fname'],
+        //             'mname' => $input['mname'],
+        //             'phone2' => $input['phone2'],
+        //             'lname' => $input['lname'],
+        //             'password' => Hash::make($password),
+        //             'terms' => 'accepted'
+        //         ]);
+        //         $user->assignRole('user');
 
-
+        //         // Get my applications
+        //         Wallet::create([
+        //             'email' => $user->email ?? '',
+        //             'user_id' => $user->id
+        //         ]);
+        //         return $user;
+        //     } catch (\Throwable $th) {
+        //         return 0;
+        //     }
+        // }
     }
 
     public function isKYCComplete(){
@@ -192,7 +182,6 @@ trait UserTrait{
         BankDetails::create($data);
         return true;
     }
-
     public function VerifyOTP(){
         try {
             if(auth()->user()->opt_verified == 0){

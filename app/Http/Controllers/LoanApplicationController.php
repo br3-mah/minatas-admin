@@ -25,9 +25,55 @@ class LoanApplicationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(){}
+
+    public function websiteApply(Request $request)
     {
-        //
+        // Validate the request
+        $validatedData = $request->toArray();
+
+        try {
+            // Upload common files
+            // $this->uploadCommonFiles($request);
+
+            // Prepare personal data
+            $personal = [
+                'fname' => $validatedData['fname'],
+                'lname' => $validatedData['lname'],
+                'phone' => $validatedData['mobile'],
+                'email' => $validatedData['email'],
+            ];
+
+            // Update user details
+            $user = $this->registerUser($personal);
+
+            // Prepare loan request data
+            $loanRequest = [
+                'loan_product_id' => $validatedData['loanType'],
+                'user_id' => $user->id,
+                'amount' => $validatedData['amount'],
+                'duration' => $validatedData['duration'],
+            ];
+
+            // Create or update temporal loan
+            $this->createQuickLoan($loanRequest);
+
+            // Return successful response
+            return response()->json([
+                'status' => 200,
+                'success' => true,
+                'message' => 'Application submitted successfully'
+            ]);
+
+        } catch (\Exception $e) {
+            // Return a more descriptive error response
+            return response()->json([
+                'status' => 500,
+                'success' => false,
+                'message' => 'An error occurred during the application process',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 
     /**
