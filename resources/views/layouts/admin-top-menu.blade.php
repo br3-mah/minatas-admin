@@ -1,8 +1,18 @@
 <header class="page-header row">
-<div class="col-auto logo-wrapper d-flex align-items-center"><a href="index.html"><img class="light-logo img-fluid" src="public/admin/img/logo-white.svg" alt="logo"/><img class="dark-logo img-fluid" src="public/admin/img/logo-dark.svg" alt="logo"/></a><a class="close-btn toggle-sidebar" href="javascript:void(0)">
-    <svg class="svg-color">
-        <use href="#Category"></use>
-    </svg></a></div>
+{{-- LOGO  --}}
+<div class="col-auto logo-wrapper d-flex align-items-center">
+    <a href="index.html">
+        <img class="light-logo img-fluid" src="public/admin/img/logo-white.svg" alt="logo"/>
+        <img class="dark-logo img-fluid" src="public/admin/img/logo-dark.svg" alt="logo"/>
+    </a>
+    {{-- <a class="close-btn toggle-sidebar" href="javascript:void(0)">
+        <svg class="svg-color">
+            <use href="#Category"></use>
+        </svg>
+    </a> --}}
+</div>
+
+{{-- TOP NAVBAR --}}
 <div class="page-main-header col">
     <div class="header-left">
     <form class="form-inline search-full col" action="#" method="get">

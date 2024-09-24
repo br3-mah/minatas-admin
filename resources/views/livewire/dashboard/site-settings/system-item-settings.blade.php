@@ -1,11 +1,13 @@
 <div wire:ignore class="page-content">
-    @switch($settings)
+    <div class="container-fluid">
+        @switch($settings)
         @case('loan-parent-types')
             @include('livewire.dashboard.site-settings.__parts.loan-parent-types')
         @break
         @case('loan-categories')
             @include('livewire.dashboard.site-settings.__parts.loan-categories')
-        @break    @case('loan-types')
+        @break    
+        @case('loan-types')
             @include('livewire.dashboard.site-settings.__parts.loan-types')
         @break
         @case('loan-types')
@@ -61,7 +63,7 @@
         @break
     @endswitch
 
-    {{-- <script>
+    <script>
         // Initial setup
         document.addEventListener('DOMContentLoaded', function () {
             // Set "Spooling" as the default selected option
@@ -79,6 +81,7 @@
             const selectedSetting = document.getElementById(option);
             selectedSetting.style.display = 'block';
         }
-    </script> --}}
+    </script>
+    </div>
 </div>
 

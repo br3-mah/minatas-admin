@@ -80,7 +80,7 @@
 							ticks: {
 								stepSize: 5,
 								fontColor: "#999",
-								fontFamily: "Nunito, sans-serif"
+								fontFamily: "Montserrat, sans-serif"
 							}
 						}
 					},

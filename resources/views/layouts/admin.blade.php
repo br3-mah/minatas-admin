@@ -21,14 +21,15 @@
     <meta name="keywords" content="admin template, Admiro admin template, best javascript admin, dashboard template, bootstrap admin template, responsive admin template, web app"/>
     <meta name="author" content="pixelstrap"/>
     <title>Minata - Dash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/iconly@2.2.1/iconly.css">
     <!-- Favicon icon-->
     <link rel="icon" href="public/admin/img/logo-white.svg" type="image/x-icon"/>
     <link rel="shortcut icon" href="public/admin/img/logo-dark.svg" type="image/x-icon"/>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com/"/>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&amp;display=swap" rel="stylesheet"/>
-    <!-- Flag icon css -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <!-- Flag icon css -->
     <link rel="stylesheet" href="public/admin/assets/css/vendors/flag-icon.css"/>
     <!-- iconly-icon-->
     <link rel="stylesheet" href="public/admin/assets/css/iconly-icon.css"/>
@@ -48,6 +49,8 @@
     <!-- App css -->
     <link rel="stylesheet" href="public/admin/assets/css/style.css"/>
     <link id="color" rel="stylesheet" href="public/admin/assets/css/color-1.css" media="screen"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     @livewireStyles
   </head>
   <body data-route-name="{{ Route::currentRouteName() }}">
@@ -100,7 +103,7 @@
     <!-- page_datatable-->
     <script src="public/admin/assets/js/datatable/datatables/datatable.custom.js"></script>
     <!-- theme_customizer-->
-    <script src="public/admin/assets/js/theme-customizer/customizer.js"></script>
+    {{-- <script src="public/admin/assets/js/theme-customizer/customizer.js"></script> --}}
     <!-- tilt-->
     <script src="public/admin/assets/js/animation/tilt/tilt.jquery.js"></script>
     <!-- page_tilt-->

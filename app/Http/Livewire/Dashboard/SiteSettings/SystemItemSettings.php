@@ -39,7 +39,7 @@ class SystemItemSettings extends Component
     {
         $this->settings = $_GET['settings'];
         $this->current_conf = $this->current_configs($_GET['settings']);
-        $this->loan_products = $this->get_all_loan_products();
+        $this->loan_products = $this->get_all_of_loan_products();
         $this->disbursements = $this->get_all_disbursement_methods();
         $this->repayment_cycles = $this->get_all_repayment_cycle();
         $this->penalties = $this->get_all_penalties();

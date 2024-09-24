@@ -12011,7 +12011,7 @@ textarea.form-control-lg {
      typography css start
 ==========================**/
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: var(--body-font-color);
   background-color: transparent !important;
@@ -12313,7 +12313,7 @@ ul {
 .chat-page h6,
 .chat-page .h6,
 .chat-page html {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .datatable-wrapper.no-footer .datatable-container {
@@ -25281,7 +25281,7 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   width: 100%;
   padding: 20px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 @media only screen and (max-width: 767.98px) {
   .icon-hover-bottom .icon-popup {
@@ -25323,7 +25323,7 @@ input::-webkit-inner-spin-button {
   color: var(--body-font-color);
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .icon-hover-bottom .form-group input {
   display: inline-block;
@@ -25425,13 +25425,13 @@ input::-webkit-inner-spin-button {
 }
 
 .icon-hover-bottom span {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .icon-hover-bottom label {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .icon-hover-bottom .btn {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 @media only screen and (max-width: 575.98px) {
   .icon-hover-bottom .btn {
@@ -25439,7 +25439,7 @@ input::-webkit-inner-spin-button {
   }
 }
 .icon-hover-bottom h5, .icon-hover-bottom .h5 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /**=====================
@@ -28755,7 +28755,7 @@ header .cart-dropdown .qty-box .input-group input {
 header .cart-dropdown .qty-box .input-group input,
 header .cart-dropdown .qty-box .input-group .btn {
   font-size: 10px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 header .cart-dropdown .qty-box .input-group .btn {
@@ -28776,7 +28776,7 @@ header .cart-dropdown .total {
   border: none;
 }
 header .cart-dropdown .total h6, header .cart-dropdown .total .h6 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
@@ -32356,7 +32356,7 @@ footer p .footer-icon {
 .general-widget div.dataTables_wrapper .dataTables_info {
   padding-left: 24px;
   color: var(--font-color);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 @media (max-width: 1230px) {
@@ -32372,7 +32372,7 @@ footer p .footer-icon {
 .dashboard-3 div.dataTables_wrapper .dataTables_paginate,
 .general-widget div.dataTables_wrapper .dataTables_paginate {
   margin-right: 24px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--font-color);
   border: none;
 }
@@ -32552,7 +32552,7 @@ footer p .footer-icon {
   padding: 4px 14px;
   background-color: var(--body-color);
   border: 1px solid var(--light-gray);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--body-font-color);
   border-radius: 5px;
 }
@@ -34031,7 +34031,7 @@ footer p .footer-icon {
   color: var(--gray-700);
   background: var(--white);
   border: solid 1px var(--light-gray);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -34052,7 +34052,7 @@ footer p .footer-icon {
   background: rgba(49, 49, 49, 0.7);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   color: var(--white);
-  font: 10px "Nunito Sans", sans-serif;
+  font: 10px "Montserrat", sans-serif;
   text-align: left;
   white-space: nowrap;
   padding: 5px;
@@ -34063,7 +34063,7 @@ footer p .footer-icon {
 }
 .chart-sparkline .jqsfield {
   color: var(--white);
-  font: 10px "Nunito Sans", sans-serif;
+  font: 10px "Montserrat", sans-serif;
   text-align: left;
 }
 
@@ -36390,7 +36390,7 @@ p.data-attributes svg {
   margin-bottom: 0;
   margin-top: 5px;
   font-size: 20px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .product-wrapper .product-grid .product-wrapper-grid .product-box .product-details h6, .product-wrapper .product-grid .product-wrapper-grid .product-box .product-details .h6 {
   color: var(--body-font-color);
@@ -40919,7 +40919,7 @@ pre {
 }
 
 .login_two_image {
-  background-image: url(../images/login/3.jpg);
+  background-image: url(../images/login/3.png);
   background-size: cover;
   background-position: center center;
 }
@@ -42920,7 +42920,7 @@ pre {
   margin-left: -30px;
 }
 .landing-page .title-style .main-title .description-title {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: calc(24px + 16 * (100vw - 300px) / 1620);
   font-weight: 700;
   text-transform: capitalize;
@@ -43955,14 +43955,14 @@ pre {
 .landing-page .features-section .feature-content .feature-box h5, .landing-page .features-section .feature-content .feature-box .h5 {
   padding-bottom: 11px;
   color: var(--body-font-color);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: calc(14px + 4 * (100vw - 300px) / 1620);
   font-weight: 500;
   text-transform: capitalize;
 }
 .landing-page .features-section .feature-content .feature-box p {
   color: var(--font-color);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: calc(14px + 2 * (100vw - 300px) / 1620);
   font-weight: 400;
 }
@@ -44045,7 +44045,7 @@ pre {
 }
 .landing-page .support-section .support-title h2, .landing-page .support-section .support-title .h2 {
   color: var(--body-font-color);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: calc(14px + 12 * (100vw - 300px) / 1620);
   font-weight: 700;
   text-transform: capitalize;
@@ -44058,7 +44058,7 @@ pre {
 }
 .landing-page .support-section .support-title p {
   color: var(--font-color);
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: calc(12px + 6 * (100vw - 300px) / 1620);
   font-weight: 500;
   margin-bottom: 8px;

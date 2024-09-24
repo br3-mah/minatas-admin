@@ -656,7 +656,7 @@ const salesStatsOption = {
         value: {
           show: true,
           // ...fontCommon,
-          fontFamily: '"Nunito Sans", sans-serif',
+          fontFamily: '"Montserrat", sans-serif',
           fontWeight: 700,
           fontSize: "16px",
           color: "#292929",

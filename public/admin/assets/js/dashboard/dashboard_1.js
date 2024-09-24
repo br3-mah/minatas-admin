@@ -60,7 +60,7 @@
       labels: {
         style: {
           fontSize: "13px",
-          fontFamily: "Nunito Sans', sans-serif",
+          fontFamily: "Montserrat', sans-serif",
           colors: "#AAA3A0",
           fontWeight: 600,
         },
@@ -80,7 +80,7 @@
         },
         style: {
           fontSize: "13px",
-          fontFamily: "Nunito Sans, sans-serif",
+          fontFamily: "Montserrat, sans-serif",
           colors: "#AAA3A0",
           fontWeight: 600,
         },
@@ -379,7 +379,7 @@
         },
         style: {
           fontSize: "13px",
-          fontFamily: "Nunito Sans, sans-serif",
+          fontFamily: "Montserrat, sans-serif",
           colors: "#AAA3A0",
           fontWeight: 600,
         },
@@ -389,7 +389,7 @@
       labels: {
         style: {
           fontSize: "13px",
-          fontFamily: "Nunito Sans', sans-serif",
+          fontFamily: "Montserrat', sans-serif",
           colors: "#AAA3A0",
           fontWeight: 600,
         },

@@ -1,13 +1,13 @@
 <div class="row">
-    <div class="col-12">
-        <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
+    <div class="py-3 col-12">
+        <div class="bg-transparent page-title-box d-sm-flex align-items-center justify-content-between">
             <h4 class="mb-sm-0">{{ ucwords(str_replace('-', ' ', $settings)) }}</h4>
 
             <div class="page-title-right">
-                <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboards</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('sys-settings') }}">System Settings</a></li>
-                    <li class="breadcrumb-item active">{{ ucwords(str_replace('-', ' ', $settings)) }}</li>
+                <ol class="m-0 breadcrumb">
+                    <li class="breadcrumb-itemz"><a href="{{ route('dashboard') }}">Dashboards</a></li>
+                    <li class="breadcrumb-itemz">&nbsp;>&nbsp;<a href="{{ route('sys-settings') }}">System Settings</a></li>
+                    <li class="breadcrumb-item active">&nbsp;>&nbsp;{{ ucwords(str_replace('-', ' ', $settings)) }}</li>
                 </ol>
             </div>
 
@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<div class="card-body py-3">
+<div class="py-3 card-body">
     <!--begin::Table container-->
     <div class="table-responsive">
         <!--begin::Table-->
@@ -45,16 +45,16 @@
                     <td>
                         <div class="d-flex align-items-center">
                             <div class="d-flex justify-content-start flex-column">
-                                <a href="#" class="text-dark fw-bold text-hover-primary mb-1 fs-6">{{ $type->name }}</a>
+                                <a href="#" class="mb-1 text-dark fw-bold text-hover-primary fs-6">{{ $type->name }}</a>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <span class="text-muted fw-semibold text-muted d-block fs-7">{{ $type->description ?? 'No Description' }}</span>
+                        <span class="text-muted fw-semibold d-block fs-7">{{ $type->description ?? 'No Description' }}</span>
                     </td>
                     <td>
-                        <a href="#" class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{{ $type->created_at->toFormattedDateString() }}</a>
-                        {{-- <span class="text-muted fw-semibold text-muted d-block fs-7">Insurance</span> --}}
+                        <a href="#" class="mb-1 text-dark fw-bold text-hover-primary d-block fs-6">{{ $type->created_at->toFormattedDateString() }}</a>
+                        {{-- <span class="text-muted fw-semibold d-block fs-7">Insurance</span> --}}
                     </td>
 
                     <td class="text-end">

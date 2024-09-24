@@ -38,7 +38,9 @@
             {{-- <svg class="stroke-icon">
             <use href="#Bag"></use>
             </svg> --}}
-            <h6 class="f-w-600">Loan Management</h6><i class="iconly-Arrow-Right-2 icli"> </i></a>
+            <h6 class="f-w-600">Loan Management</h6>
+                <i class="fas fa-plus"></i>
+            </a>
         <ul class="sidebar-submenu">
             <li> <a href="{{ route('approved-loans') }}">Open Loans</a></li>
             <li> <a href="{{ route('closed-loans') }}">Closed Loans</a></li>
@@ -47,12 +49,12 @@
             <li> <a href="{{ route('missed-repayments') }}">Missed Repayments</a></li>
             <li> <a href="{{ route('no-repayments') }}">No Repayments</a></li>
             <li> <a href="{{ route('past-maturity-date') }}">Past Maturity </a></li>
-            <li><a class="submenu-title" href="javascript:void(0)">Late Loans<i class="iconly-Arrow-Right-2 icli"> </i></a>
+            {{-- <li><a class="submenu-title" href="javascript:void(0)">Late Loans<i class="iconly-Arrow-Right-2 icli"> </i></a>
             <ul class="according-submenu">
                 <li> <a href="{{ route('one-month-late') }}"> 1 Month(s) Late Loans</a></li>
                 <li> <a href="{{ route('three-month-late') }}"> 3 Month(s) Late Loans</a></li>
             </ul>
-            </li>
+            </li> --}}
             <li> <a href="{{ route('principal-outstanding') }}">Principal Outstanding </a></li>
         </ul>
         </li>
