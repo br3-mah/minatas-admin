@@ -9,8 +9,8 @@
     <meta name="author" content="pixelstrap">
     <title>Minatas | SignIn</title>
     <!-- Favicon icon-->
-    <link rel="icon" href="public/admin/assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="public/admin/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="public/admin/img/fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="public/admin/img/fav.png" type="image/x-icon">
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -31,6 +31,17 @@
     <!-- App css -->
     <link rel="stylesheet" href="public/admin/assets/css/style.css">
     <link id="color" rel="stylesheet" href="public/admin/assets/css/color-1.css" media="screen">
+    {{-- SHow hide password styles --}}
+    <style>
+    .show-hide .show::before {
+          content: "👁"; /* Example icon */
+      }
+
+      .show-hide .show.hide::before {
+          content: "🙈"; /* Change icon when password is visible */
+      }
+
+    </style>
   </head>
   <body>
     <!-- tap on top starts-->
@@ -66,16 +77,17 @@
                   <div class="form-group">
                     <label class="col-form-label">Password</label>
                     <div class="form-input position-relative">
-                      <input class="form-control" type="password" name="password" required="" >
-                      <div class="show-hide"><span class="show">                         
-                      </span></div>
+                        <input class="form-control" type="password" id="password" name="password" required placeholder="">
+                        <div class="show-hide">
+                            <span class="show" onclick="togglePassword()"></span>
+                        </div>
                     </div>
                   </div>
                   <div class="mb-0 form-group checkbox-checked">
                     <div class="form-check checkbox-solid-info">
                       <input class="form-check-input" name="remember_me" id="solid6" type="checkbox">
                       <label class="form-check-label" for="solid6">Remember password</label>
-                    </div><a class="link" href="forget-password.html">Forgot password?  </a>
+                    {{-- </div><a class="link" href="forget-password.html">Forgot password?  </a> --}}
                     <div class="mt-3 text-end">
                       <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
                     </div>
@@ -83,21 +95,21 @@
                   
                   <script>
                     (function() {
-                    'use strict';
-                    window.addEventListener('load', function() {
-                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                    var forms = document.getElementsByClassName('needs-validation');
-                    // Loop over them and prevent submission
-                    var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                    }, false);
-                    });
-                    }, false);
+                        'use strict';
+                        window.addEventListener('load', function() {
+                          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                          var forms = document.getElementsByClassName('needs-validation');
+                          // Loop over them and prevent submission
+                          var validation = Array.prototype.filter.call(forms, function(form) {
+                          form.addEventListener('submit', function(event) {
+                          if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          }
+                          form.classList.add('was-validated');
+                          }, false);
+                          });
+                        }, false);
                     })();
                   </script>
                 </form>
@@ -106,6 +118,20 @@
           </div>
         </div>
       </div>
+      <script>
+          function togglePassword() {
+              var passwordField = document.getElementById("password");
+              var showHideIcon = document.querySelector(".show-hide .show");
+
+              if (passwordField.type === "password") {
+                  passwordField.type = "text";
+                  showHideIcon.classList.add("hide");  // Optionally change icon style
+              } else {
+                  passwordField.type = "password";
+                  showHideIcon.classList.remove("hide");
+              }
+          }
+      </script>
       <!-- jquery-->
       <script src="public/admin/assets/js/vendors/jquery/jquery.min.js"></script>
       <!-- bootstrap js-->
